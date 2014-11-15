@@ -1,7 +1,7 @@
 hackfoo
 =======
 
-GMAIL: hackrpi.foo@gmail.com /n
-PARSE: hackfoo /n
+GMAIL: hackrpi.foo@gmail.com 
+PARSE: hackfoo 
 
 password for all: hackfoo2014
