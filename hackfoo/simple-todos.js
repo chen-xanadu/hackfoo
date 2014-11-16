@@ -100,6 +100,13 @@ if(Meteor.isClient){
         // Get the ID of the current user
         var currentUserId = Meteor.userId();
 
+	//remove all the other players. Only one player is allowed.
+	var playerCursor = PlayersList.find({});
+	playerCursor.forEach(function(person) {	
+		var tempId = person._id;
+		PlayersList.remove(tempId);
+	});
+
         // Insert the new player into the collection
         PlayersList.insert({
           firstName: firstNameVar,
@@ -184,7 +191,7 @@ z
 	var numCourses = 0; //number of classes per semester (assume max limit is 4)
 	var numSem = 1; //number of semesters processed
 	var prevLevel = 1;
-	optionsHTML += "<TABLE BORDER='0' cellpadding='10' CELLSPACING='10' width='8000'>";
+	optionsHTML += "<TABLE BORDER='0' cellpadding='10' CELLSPACING='10' width='1500'>";
 
 	//First semester
 	optionsHTML += "<tr><td width='100'><div style='box-shadow: 0 0px 3px black;width: 8000;height: 75; padding:10px'><div style='box-shadow: 0 0px 0px white;display: inline-block;width: 200px;height: 100px;text-align: left;vertical-align: middle;'><br/><br/>";
@@ -213,7 +220,9 @@ z
 		}
 
 		//draw the class block
-		optionsHTML += "<div style='box-shadow: 0 0px 3px black;display: inline-block;width: 200px;height: 100px;text-align: center;vertical-align: middle; '>" + "<br/><br/>" + product.className + "</div>";
+		optionsHTML += "<div style='box-shadow: 0 0px 3px black;display: inline-block;width: 200px;height: 90px;text-align: center;vertical-align: middle; '>" + "<br/><br/><a href='classDesc/" + product.className + "'>" + product.className + "</a></div>";
+
+		
 
 		//draw a dummy in between the class blacks
 		optionsHTML += "<div style='box-shadow: 0 0px 0px white;display: inline-block;width:20px;height:100px;text-align: center;vertical-align: middle; '></div>";
@@ -265,7 +274,6 @@ z
         // Get the ID of the current user
         var currentUserId = Meteor.userId();
 
-        // Insert the new player into the collection
         ClassList.insert({
           className: classNameVar,
           prereq: prereqVar,
@@ -276,6 +284,7 @@ z
     }
   });
 
+	//Remove all instances of this class from the table
    Template.deleteClassForm.events({
     'submit form': function(event){
 
@@ -290,17 +299,48 @@ z
 			var classId = classItem._id;
     			ClassList.remove(classId);
     	});
-      }
+      } 
    });
+
+
+	//Return relevant information about a class
+	Template.classDesc.getClassInfo = function() {
+        	id = this._id;
+	
+		classCursor = ClassList.find({className: id});
+		var prereq = "";
+		classCursor.forEach(function(classItem) {
+			prereq = classItem.prereq;
+    			
+		});
+		return "Prerequisite: " + prereq + "<br/>";
+	}
+	
+
+       //routing allows us to switch between multiple webpages at ease
+	Router.map(function() {
+  	this.route('home', {path: '/'});
+  	this.route('settings', {path: '/settings'});
+	this.route('classDesc', {
+  		// get parameter via this.params
+  		path: '/classDesc/:_id',
+		data: function (){
+		    _id  = this.params._id;
+		
+		    templateData = {
+		      _id: _id,
+		      prereq: ""
+		    };
+    		
+		    return templateData;
+  		}
+	    });
+	this.route('profile', { path: '/profile', });
+	});
 }
+
 
 // Code that only runs on the server (where the application is hosted)
 if(Meteor.isServer){
-  	Meteor.startup(function() {
-	       return Meteor.methods({
-		removeAllPosts: function() {
-		return ClassLists.remove({});
-		}
-	    });
-  	});
+  
 }
