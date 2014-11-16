@@ -10,6 +10,8 @@
 		5C995F761A185C420092AEAB /* CLICHE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLICHE.h; sourceTree = "<group>"; };
 		5C995F771A185C420092AEAB /* CLICHE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLICHE.m; sourceTree = "<group>"; };
 		5C995F781A185CA30092AEAB /* HackFOO_FIRST.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_FIRST.jpg; sourceTree = "<group>"; };
+		5C995F791A185DD70092AEAB /* Card Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card Template.png"; sourceTree = "<group>"; };
+		5C995F7A1A187FA20092AEAB /* HackFOO_Main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_Main.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -19,6 +21,8 @@
 				5C995F761A185C420092AEAB /* CLICHE.h */,
 				5C995F771A185C420092AEAB /* CLICHE.m */,
 				5C995F781A185CA30092AEAB /* HackFOO_FIRST.jpg */,
+				5C995F791A185DD70092AEAB /* Card Template.png */,
+				5C995F7A1A187FA20092AEAB /* HackFOO_Main.jpg */,
 			);
 			sourceTree = "<group>";
 		};
