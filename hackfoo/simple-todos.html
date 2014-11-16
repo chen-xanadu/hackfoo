@@ -1,18 +1,48 @@
+<!---These web pages are actually separate, but they're placed in the same file -->
 <head>
-    <title>ClassFoo</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+ <title>ClassFoo</title>
 </head>
 <body>
-    <h1>ClassFoo</h1>
-    {{> loginButtons}}
+    
+    <ul id="nav">
+        <li id="emailDisplay" style="margin-right: 25%;">{{> loginButtons}}</li>
+	<li><a href="/profile"><img src="https://raw.githubusercontent.com/chen-xanadu/hackfoo/1648689a7a9ff34165378610f19f18d2ae39e418/hackfoo/Avatar30.png"/></a></li>
+	<li ><a href="/settings">Settings</a></li>
+	<li><a href="/">Courses</a></li>
+    </ul>
+
+</body>
+
+<template name="home">
+    {{> showClassTree}}
+</template>
+
+<template name="settings">
+   {{#if currentUser}}
+	<h2>Manage Profile</h2>
+    	{{> addPlayerForm}}
+    	<br/><br/><br/>
+
+	<h2>Manage Classes</h2>
+    	{{> addClassForm}}
+    	<br/><br/>
+    	{{> deleteClassForm}}
+   {{/if}}
+</template>
+
+<template name="classDesc">
+    Course: {{ _id }}  <br/>
+	{{{getClassInfo}}}
+</template>
+
+<template name="profile">
     {{#if currentUser}}
 	{{> leaderboard}}
     {{/if}}
-    {{> addPlayerForm}}
-    {{> addClassForm}}
-    {{> deleteClassForm}}
-    {{> showClassTree}}
-</body>
+</template>
 
+<!--- Main page functions --->
 <template name="leaderboard">
 	<ul>
 	    {{#each player}}
@@ -20,12 +50,6 @@
  		<li class="player {{selectedClass}}">Major: {{major}}</li>
 		<li class="player {{selectedClass}}">Class: {{classYear}}</li><br/>
 	    {{/each}}
-	    	<li>
-	    		<input type="button" class="remove" value="Remove User">
-    		</li>
-    		{{#if showSelectedPlayer}}
-			    <li>Selected Player: {{showSelectedPlayer.name}}</li>
-			{{/if}}
 	</ul>
 </template>
 
@@ -36,7 +60,7 @@
 	    Last Name <br/><input type="text" name="lastName">  <br/>
             Major<br/><input type="text" name="major">  <br/>
 	    Class Year<br/><input type="text" name="classYear">  <br/>
-            <input type="submit" value="Add User">
+            <input type="submit" value="Edit User">
         </form>
     {{/if}}
 </template>
@@ -60,7 +84,7 @@
 </template>
 
 <template name="showClassTree">
-	Class Tree: <br/>
 	{{{getClassOptions}}}
 	
 </template>
+
