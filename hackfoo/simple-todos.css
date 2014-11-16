@@ -1,0 +1,13 @@
+.selected{
+    background-color: yellow;
+}
+
+#main .block{
+    display: inline-block;
+    border: 1px solid #ECEDE8;
+    margin: 10px 10px;
+    overflow: hidden;
+    height: 265px;
+    width: 265px;
+    vertical-align: top;
+}

@@ -1,0 +1,66 @@
+<head>
+    <title>ClassFoo</title>
+</head>
+<body>
+    <h1>ClassFoo</h1>
+    {{> loginButtons}}
+    {{#if currentUser}}
+	{{> leaderboard}}
+    {{/if}}
+    {{> addPlayerForm}}
+    {{> addClassForm}}
+    {{> deleteClassForm}}
+    {{> showClassTree}}
+</body>
+
+<template name="leaderboard">
+	<ul>
+	    {{#each player}}
+	        <li class="player {{selectedClass}}">Name: {{firstName}} {{lastName}}</li>
+ 		<li class="player {{selectedClass}}">Major: {{major}}</li>
+		<li class="player {{selectedClass}}">Class: {{classYear}}</li><br/>
+	    {{/each}}
+	    	<li>
+	    		<input type="button" class="remove" value="Remove User">
+    		</li>
+    		{{#if showSelectedPlayer}}
+			    <li>Selected Player: {{showSelectedPlayer.name}}</li>
+			{{/if}}
+	</ul>
+</template>
+
+<template name="addPlayerForm">
+    {{#if currentUser}}
+        <form>
+            First Name <br/><input type="text" name="firstName"> <br/>
+	    Last Name <br/><input type="text" name="lastName">  <br/>
+            Major<br/><input type="text" name="major">  <br/>
+	    Class Year<br/><input type="text" name="classYear">  <br/>
+            <input type="submit" value="Add User">
+        </form>
+    {{/if}}
+</template>
+
+<template name="addClassForm">
+     {{#if currentUser}}
+        <form>
+            Class Name <br/><input type="text" name="className"> <br/>
+	    Prereq <br/><input type="text" name="prereq">  <br/>
+            <input type="submit" value="Add Class">
+        </form>
+    {{/if}}
+</template>
+<template name="deleteClassForm">
+     {{#if currentUser}}
+        <form>
+            Class Name <br/><input type="text" name="className"> <br/>
+	    <input type="submit" value="Remove Class">
+        </form>
+    {{/if}}
+</template>
+
+<template name="showClassTree">
+	Class Tree: <br/>
+	{{{getClassOptions}}}
+	
+</template>
