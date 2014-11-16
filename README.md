@@ -5,13 +5,13 @@ GMAIL: hackrpi.foo@gmail.com
 
 PARSE: hackfoo 
 
-password for all: hackfoo2014
+password for all: *******2014
 
 SERVER INFO:
 
 IP: 184.164.89.13
 
-ROOT PASSWORD: caribou2012
+ROOT PASSWORD: *******2012
 
 Userful links:
 
