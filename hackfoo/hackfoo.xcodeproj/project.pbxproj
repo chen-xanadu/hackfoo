@@ -12,6 +12,8 @@
 		5C995F781A185CA30092AEAB /* HackFOO_FIRST.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_FIRST.jpg; sourceTree = "<group>"; };
 		5C995F791A185DD70092AEAB /* Card Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Card Template.png"; sourceTree = "<group>"; };
 		5C995F7A1A187FA20092AEAB /* HackFOO_Main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_Main.jpg; sourceTree = "<group>"; };
+		5C995F7B1A1891E40092AEAB /* HackFOO_Description.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_Description.jpg; sourceTree = "<group>"; };
+		5C995F7C1A1891E40092AEAB /* HackFOO_FIRST_SIGHUP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_FIRST_SIGHUP.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -23,6 +25,8 @@
 				5C995F781A185CA30092AEAB /* HackFOO_FIRST.jpg */,
 				5C995F791A185DD70092AEAB /* Card Template.png */,
 				5C995F7A1A187FA20092AEAB /* HackFOO_Main.jpg */,
+				5C995F7B1A1891E40092AEAB /* HackFOO_Description.jpg */,
+				5C995F7C1A1891E40092AEAB /* HackFOO_FIRST_SIGHUP.jpg */,
 			);
 			sourceTree = "<group>";
 		};
