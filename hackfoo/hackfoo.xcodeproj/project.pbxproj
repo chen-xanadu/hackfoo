@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		5C7F19481A18FC330021EE48 /* Avatar30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar30.png; sourceTree = "<group>"; };
 		5C995F761A185C420092AEAB /* CLICHE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLICHE.h; sourceTree = "<group>"; };
 		5C995F771A185C420092AEAB /* CLICHE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLICHE.m; sourceTree = "<group>"; };
 		5C995F781A185CA30092AEAB /* HackFOO_FIRST.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_FIRST.jpg; sourceTree = "<group>"; };
@@ -27,6 +28,7 @@
 				5C995F7A1A187FA20092AEAB /* HackFOO_Main.jpg */,
 				5C995F7B1A1891E40092AEAB /* HackFOO_Description.jpg */,
 				5C995F7C1A1891E40092AEAB /* HackFOO_FIRST_SIGHUP.jpg */,
+				5C7F19481A18FC330021EE48 /* Avatar30.png */,
 			);
 			sourceTree = "<group>";
 		};
