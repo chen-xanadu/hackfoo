@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		5C7F19481A18FC330021EE48 /* Avatar30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar30.png; sourceTree = "<group>"; };
+		5C7F194B1A190CEC0021EE48 /* hc_req.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hc_req.png; sourceTree = "<group>"; };
 		5C995F761A185C420092AEAB /* CLICHE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLICHE.h; sourceTree = "<group>"; };
 		5C995F771A185C420092AEAB /* CLICHE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLICHE.m; sourceTree = "<group>"; };
 		5C995F781A185CA30092AEAB /* HackFOO_FIRST.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HackFOO_FIRST.jpg; sourceTree = "<group>"; };
@@ -18,6 +19,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		5C7F19491A190CEB0021EE48 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F194A1A190CEC0021EE48 /* cin */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		5C7F194A1A190CEC0021EE48 /* cin */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F194B1A190CEC0021EE48 /* hc_req.png */,
+			);
+			path = cin;
+			sourceTree = "<group>";
+		};
 		5C995F6F1A185C1B0092AEAB = {
 			isa = PBXGroup;
 			children = (
@@ -29,6 +46,7 @@
 				5C995F7B1A1891E40092AEAB /* HackFOO_Description.jpg */,
 				5C995F7C1A1891E40092AEAB /* HackFOO_FIRST_SIGHUP.jpg */,
 				5C7F19481A18FC330021EE48 /* Avatar30.png */,
+				5C7F19491A190CEB0021EE48 /* bin */,
 			);
 			sourceTree = "<group>";
 		};
